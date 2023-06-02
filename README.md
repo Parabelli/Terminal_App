@@ -1,2 +1,2 @@
 # Terminal_App
-1.The-Field/09-Backend-102-Terminal_App
+This is the terminal app i did in collaboration with Camila
