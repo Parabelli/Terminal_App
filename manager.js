@@ -5,6 +5,8 @@ let prompt = require("prompt-sync")();
 
 let tasks = ["task1", "task2", "task3"];
 
+// FUNCTION
+
 function addtask(add) {
   tasks.push(add);
 }
@@ -24,6 +26,9 @@ function checktask(check) {
     }
   }
 }
+
+// EXECUTE
+
 function Menu() {
   console.log(
     "Welcome to your task manager, Press:\n1. to see all your tasks\n2. to add a task\n3. to delete a task\n4. to mark a task as done\n5. to Exit the task manager"
@@ -35,7 +40,7 @@ function Menu() {
     return "";
   } else if (number == 2) {
     let add = prompt("add a task : ");
-    tasks.push(add);
+    addtask(add);
     console.log(Menu());
     return "";
   } else if (number == 3) {
@@ -52,27 +57,4 @@ function Menu() {
     return "closing";
   }
 }
-
-console.log(
-  "Welcome to your task manager, Press:\n1. to see all your tasks\n2. to add a task\n3. to delete a task\n4. to mark a task as done\n5. to Exit the task manager"
-);
-let number = prompt();
-
-if (number == 1) {
-  console.log(tasks);
-  console.log(Menu());
-} else if (number == 2) {
-  let add = prompt("add a task : ");
-  addtask(add);
-  console.log(Menu());
-} else if (number == 3) {
-  let del = prompt("delete a task : ");
-  deltask(del);
-  console.log(Menu());
-} else if (number == 4) {
-  let check = prompt("check a task : ");
-  checktask(check);
-  console.log(Menu());
-} else if (number == 5) {
-  console.log("closing");
-}
+console.log(Menu());
